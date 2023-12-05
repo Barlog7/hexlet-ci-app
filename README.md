@@ -1,3 +1,4 @@
+[![work1](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/work1.yml/badge.svg)](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/work1.yml)
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
