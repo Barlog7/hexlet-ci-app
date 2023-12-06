@@ -1,5 +1,6 @@
 [![work1](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/work1.yml/badge.svg)](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/work1.yml)
 [![cache-npm](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/cache_npm.yml/badge.svg)](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/cache_npm.yml)
+[![.github/workflows/snyk.yml](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/snyk.yml/badge.svg)](https://github.com/Barlog7/hexlet-ci-app/actions/workflows/snyk.yml)
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
