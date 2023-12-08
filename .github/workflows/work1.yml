@@ -16,23 +16,17 @@ jobs:
         with:
           node-version: '18.x'
           cache: 'npm' # ускоряет повторные сборки
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/node@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
       # Ставим зависимости
       - run: make setup
       # Запускаем тесты
       - name: run tests
-        if: always()
         run: make test # name и run относятся к одной задаче, поэтому дефис ставится только перед name
       # Запуск линтера
-      - uses: makelint
-        if: always()
-        run: make lint
-      - uses: nmpci
-        if: always()
-        run: npm ci
-      - uses: nmptest
-        if: always()
-        run: npm test
+      - run: make lint
+      - run: npm ci
+      - run: npm test
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
