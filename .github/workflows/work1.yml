@@ -24,8 +24,15 @@ jobs:
       - run: make setup
       # Запускаем тесты
       - name: run tests
+        if: always()
         run: make test # name и run относятся к одной задаче, поэтому дефис ставится только перед name
       # Запуск линтера
-      - run: make lint
-      - run: npm ci
-      - run: npm test
+      - uses: makelint
+        if: always()
+        run: make lint
+      - uses: nmpci
+        if: always()
+        run: npm ci
+      - uses: nmptest
+        if: always()
+        run: npm test
